@@ -20,6 +20,7 @@ env:
   RUN_TYPE: coros_to_garmin # garmin_to_coros 佳明同步高驰、 coros_to_garmin
 
 jobs:
+  if: false #This disables the entire workflow
   build:
     runs-on: ubuntu-20.04
 
