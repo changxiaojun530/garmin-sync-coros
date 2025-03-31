@@ -5,8 +5,8 @@ on:
   schedule:
     - cron: '0 0,7,21 * * ?'
 env:
-  GITHUB_NAME: hubiter
-  GITHUB_EMAIL: tninja@foxmail.com
+  GITHUB_NAME: changxiaojun530
+  GITHUB_EMAIL: changxiaojun@yeah.net
   ## 佳明配置
   GARMIN_AUTH_DOMAIN: ${{ secrets.GARMIN_AUTH_DOMAIN }}
   GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
@@ -16,8 +16,13 @@ env:
   ## Coros配置
   COROS_EMAIL: ${{ secrets.COROS_EMAIL }}
   COROS_PASSWORD: ${{ secrets.COROS_PASSWORD }}
-
+  ### 按需选择，如果选择 garmin_to coros 则佳明同步高驰
+  ### 如果选择 coros_to_garmin 则告知同步佳明
+  RUN_TYPE: garmin_to_coros #佳明同步高驰
+  
 jobs:
+#禁用整个工作流代码
+#if: false #This disables the entire workflow
   build:
     runs-on: ubuntu-20.04
 
